@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference"/>
+        <attr name="mvAnimDuration" format="integer|reference"/>
+        <attr name="mvTextSize" format="dimension|reference"/>
+        <attr name="mvTextColor" format="color|reference"/>
+        <attr name="mvSingleLine" format="boolean"/>
+        <attr name="mvGravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="mvDirection">
+            <enum name="bottom_to_top" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="left_to_right" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TableLayout">
+        <attr name="tableMode" format="enum">
+            <enum name="auto" value="0" />
+            <enum name="equallyDivide" value="1" />
+        </attr>
+        <attr name="tableRowHeight" format="dimension" />
+        <attr name="tableDividerSize" format="dimension" />
+        <attr name="tableDividerColor" format="color" />
+        <attr name="tableColumnPadding" format="dimension" />
+        <attr name="tableTextGravity" format="enum">
+            <enum name="center" value="0" />
+            <enum name="leftCenter" value="1" />
+            <enum name="rightCenter" value="2" />
+        </attr>
+        <attr name="tableTextSize" format="dimension" />
+        <attr name="tableTextColor" format="color" />
+        <attr name="tableTextColorSelected" format="color" />
+        <attr name="backgroundColorSelected" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CountDownView">
+        <attr name="background_color" format="color"/>
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="text" format="string"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="BottomBar">
+        <attr name="bar_img" format="reference"/>
+        <attr name="bar_text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ApproveListLayout">
+        <attr name="pic_count" format="integer"/>
+        <attr name="pic_size" format="dimension"/>
+        <attr name="pic_offset" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="FloatViewLayout">
+        <attr name="offset" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="civ_border_width" format="dimension"/>
+        <attr name="civ_border_color" format="color"/>
+        <attr name="civ_border_overlay" format="boolean"/>
+        <attr name="civ_fill_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressChartView">
+        <attr name="android:textSize"/>
+        <attr name="baseColor" format="color"/>
+        <attr name="isThumbnailMode" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="TimerView">
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalProgressView">
+        <attr name="progress" format="integer"/>
+        <attr name="maxProgress" format="integer"/>
+        <attr name="foregroundProgressColor" format="color"/>
+        <attr name="backgroundProgressColor" format="color"/>
+        <attr name="foregroundProgressType" format="enum">
+            <enum name="rect" value="0"/>
+            <enum name="round" value="1"/>
+        </attr>
+        <attr name="backgroundProgressType" format="enum">
+            <enum name="rect" value="0"/>
+            <enum name="round" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="android:text"/>
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="android:lineSpacingMultiplier"/>
+        <attr name="maxLineCount" format="integer"/>
+        <attr name="hasAnimation" format="boolean"/>
+        <attr name="expandLabel" format="string"/>
+        <attr name="collapseLabel" format="string"/>
+        <attr name="expandLabelColor" format="color"/>
+        <attr name="collapseLabelColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerLayout">
+        <attr name="cornerColor" format="color"/>
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="cornerType" format="enum">
+            <enum name="round" value="1"/>
+            <enum name="rect" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="cview_RoundCornerLayout">
+        <attr name="cview_roundCornerColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="cview_RectCornerLayout">
+        <attr name="cview_rectCornerColor" format="color"/>
+        <attr name="cview_rectCornerRadius" format="dimension"/>
+    </declare-styleable>
+</resources>

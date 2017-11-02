@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/viewswitcher_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/viewswitcher_tv_one"
+        android:layout_marginTop="9dp"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:textSize="13dp"
+        android:textColor="#474747"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/viewswitcher_tv_two"
+        android:layout_marginBottom="10dp"
+        android:singleLine="true"
+        android:gravity="bottom"
+        android:ellipsize="end"
+        android:textSize="13dp"
+        android:textColor="#474747"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+
