@@ -1,9 +1,7 @@
 package demo.liufan.com.myapplication;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +11,9 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import demo.liufan.com.myapplication.activity.DiaLog;
 
 
 public class ListViewMenuActivity extends Activity {
@@ -97,7 +93,6 @@ public class ListViewMenuActivity extends Activity {
                 final int id = v.getId();
                 if (id == R.id.listview_menu_item_menu_toast) {
 //                    Toast.makeText(ListViewMenuActivity.this, "提示" + mExpandedMenuPos, Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(ListViewMenuActivity.this, DiaLog.class));
                 } else if (id == R.id.listview_menu_item_menu_collapse) {
                     mExpandedMenuPos = -1;
                     notifyDataSetChanged();

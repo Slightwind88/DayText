@@ -3,9 +3,15 @@ package demo.liufan.com.myapplication.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.widget.GridView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import demo.liufan.com.myapplication.R;
+import demo.liufan.com.myapplication.adapter.GriViewInquiryPriceAdapter;
 import demo.liufan.com.myapplication.wight.FlowLayout;
 
 /**
@@ -19,6 +25,8 @@ public class FlowLayoutActivity extends Activity {
                     "Android", "Weclome Hello", "Button Text", "TextView" };
 
     private FlowLayout mFlowLayout;
+    private GridView gridlist_goods;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,7 +34,7 @@ public class FlowLayoutActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flowlayoutactivity);
 
-        mFlowLayout = (FlowLayout) findViewById(R.id.id_flowlayout);
+        gridlist_goods = (GridView) findViewById(R.id.gridlist_goods);
 
         initData();
     }
@@ -44,14 +52,17 @@ public class FlowLayoutActivity extends Activity {
         // btn.setText(mVals[i]);
         // mFlowLayout.addView(btn, lp);
         // }
-        LayoutInflater mInflater = LayoutInflater.from(this);
+       /* LayoutInflater mInflater = LayoutInflater.from(this);
         for (int i = 0; i < mVals.length; i++)
         {
             TextView tv = (TextView) mInflater.inflate(R.layout.tv,
                     mFlowLayout, false);
             tv.setText(mVals[i]);
             mFlowLayout.addView(tv);
-        }
+        }*/
+
+        List<String> mdata = Arrays.asList(mVals);
+        gridlist_goods.setAdapter(new GriViewInquiryPriceAdapter(this, mdata));
 
     }
 

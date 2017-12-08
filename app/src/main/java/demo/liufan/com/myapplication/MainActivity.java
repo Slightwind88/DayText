@@ -1,24 +1,23 @@
 package demo.liufan.com.myapplication;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import demo.liufan.com.myapplication.activity.ADRollUDActivity;
-import demo.liufan.com.myapplication.activity.DiaLog;
 import demo.liufan.com.myapplication.activity.FlowLayoutActivity;
-import demo.liufan.com.myapplication.activity.RollingAdvertisement;
+import demo.liufan.com.myapplication.activity.InquiryQuotationActivity;
+import demo.liufan.com.myapplication.activity.MyGridView;
 import demo.liufan.com.myapplication.activity.TabViewExcelActivity;
 import demo.liufan.com.myapplication.listener.DialogUIListener;
 import demo.liufan.com.myapplication.utils.SnackbarUtil;
 import demo.liufan.com.myapplication.wight.BottomMenuDialog;
 import demo.liufan.com.myapplication.wight.DialogUIUtils;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private BottomMenuDialog d5;
 
@@ -34,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_Event_DiaLog(View view){
-        startActivity(new Intent(this, DiaLog.class));
+        startActivity(new Intent(this, MyGridView.class));
     }
 
     public void onClick_Event_3(View view){
-        startActivity(new Intent(this, RollingAdvertisement.class));
+        startActivity(new Intent(this, InquiryQuotationActivity.class));
     }
 
     public void onClick_Event_4(View view){
@@ -90,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         d5.dismiss();
                         Intent data=new Intent(Intent.ACTION_SENDTO);
-                        data.setData(Uri.parse("mailto:670236133@qq.com"));
-                        data.putExtra(Intent.EXTRA_SUBJECT, "这是标题");
-                        data.putExtra(Intent.EXTRA_TEXT, "这是内容");
+                        data.setData(Uri.parse("mailto:"));
+                        data.putExtra(Intent.EXTRA_SUBJECT, "");
+                        data.putExtra(Intent.EXTRA_TEXT, "");
                         startActivity(data);
                     }
                 }).create();

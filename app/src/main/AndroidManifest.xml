@@ -20,13 +20,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.DiaLog"/>
+        <activity android:name=".activity.MyGridView"/>
         <activity android:name=".activity.HomeActivity"/>
         <activity android:name=".ListViewMenuActivity"/>
-        <activity android:name=".activity.RollingAdvertisement"/>
         <activity android:name=".activity.TabViewExcelActivity"/>
         <activity android:name=".activity.FlowLayoutActivity"/>
         <activity android:name=".activity.ADRollUDActivity"/>
+        <activity android:name=".activity.InquiryQuotationActivity"/>
     </application>
 
 </manifest>

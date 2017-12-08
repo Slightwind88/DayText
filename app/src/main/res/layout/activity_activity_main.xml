@@ -17,12 +17,12 @@
             android:onClick="onClick_Event_DiaLog"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="掉起邮箱"/>
+            android:text="网格布局"/>
         <Button
             android:onClick="onClick_Event_3"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="广告消息展示"/>
+            android:text="DialogList弹窗"/>
         <Button
             android:onClick="onClick_Event_4"
             android:layout_width="match_parent"

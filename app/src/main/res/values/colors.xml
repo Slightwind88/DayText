@@ -38,4 +38,7 @@
     <color name="text_msg_33">#333333</color>
     <color name="line_dd">#dddddd</color>
     <color name="dialogui_btn_pressed">#eeeeee</color>
+    <color name="app_style_blue">#0096FF</color>   <!-- 蓝色 -->
+    <color name="default_line_color">#cccccc</color>
+    <color name="default_gray">#e3e3e3</color>
 </resources>

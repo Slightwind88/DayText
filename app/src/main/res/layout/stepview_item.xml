@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+
+        >
+        <ImageView
+            android:id="@+id/stepicon_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_launcher"
+            />
+        <View
+            android:id="@+id/line_v"
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:background="@color/gray_aaa"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            ></View>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/blue_afe"
+            android:text="基础信息"/>
+
+    </LinearLayout>
+</RelativeLayout>
