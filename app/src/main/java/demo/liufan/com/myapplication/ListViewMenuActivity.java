@@ -3,6 +3,7 @@ package demo.liufan.com.myapplication;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,22 +15,37 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import demo.liufan.com.myapplication.wight.NewMyListView;
 
 
 public class ListViewMenuActivity extends Activity {
     private int mExpandedMenuPos = -1;
     private ListViewAdapter mAdapter;
+    private static final String TAG = "ListViewMenuActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_menu);
         ArrayList<Integer> data = new ArrayList<Integer>();
-        for (int index = 0; index != 40; ++index) {
+        for (int index = 0; index != 2; ++index) {
             data.add(index);
         }
-        ListView list = (ListView)findViewById(R.id.listview_menu_list);
-        list.setAdapter(mAdapter = new ListViewAdapter(this, data));
-        list.setOnItemClickListener(new OnListItemClickListenser());
+        final NewMyListView list = (NewMyListView)findViewById(R.id.listview_menu_list);
+        mAdapter = new ListViewAdapter(this, data);
+        list.setAdapter(mAdapter);
+//        list.setOnItemClickListener(new OnListItemClickListenser());
+        list.setOnItemClickListener(new NewMyListView.MyOnItemClickListener() {
+            @Override
+            public void onItemClick(ViewGroup parent, View view, int position, Object o) {
+                if (position == mExpandedMenuPos) {
+                    mExpandedMenuPos = -1;
+                } else {
+                    mExpandedMenuPos = position;
+                }
+                list.setAdapter(mAdapter);
+                mAdapter.notifyDataSetChanged();
+            }
+        });
     }
     private class ListViewAdapter extends BaseAdapter {
         private LayoutInflater mLayoutInflater;
@@ -84,6 +100,7 @@ public class ListViewMenuActivity extends Activity {
                 holder.btnCollapse.setText("收起" + position);
                 holder.btnToast.setOnClickListener(mOnMenuClickListenser);
                 holder.btnCollapse.setOnClickListener(mOnMenuClickListenser);
+                Log.i(TAG, "getView: "+position);
             }
             return convertView;
         }

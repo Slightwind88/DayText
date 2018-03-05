@@ -41,25 +41,6 @@ public class FlowLayoutActivity extends Activity {
 
     public void initData()
     {
-        // for (int i = 0; i < mVals.length; i++)
-        // {
-        // Button btn = new Button(this);
-        //
-        // MarginLayoutParams lp = new MarginLayoutParams(
-        // MarginLayoutParams.WRAP_CONTENT,
-        // MarginLayoutParams.WRAP_CONTENT);
-        //
-        // btn.setText(mVals[i]);
-        // mFlowLayout.addView(btn, lp);
-        // }
-       /* LayoutInflater mInflater = LayoutInflater.from(this);
-        for (int i = 0; i < mVals.length; i++)
-        {
-            TextView tv = (TextView) mInflater.inflate(R.layout.tv,
-                    mFlowLayout, false);
-            tv.setText(mVals[i]);
-            mFlowLayout.addView(tv);
-        }*/
 
         List<String> mdata = Arrays.asList(mVals);
         gridlist_goods.setAdapter(new GriViewInquiryPriceAdapter(this, mdata));

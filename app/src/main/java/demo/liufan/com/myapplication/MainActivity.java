@@ -1,30 +1,56 @@
 package demo.liufan.com.myapplication;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import java.util.logging.Logger;
 
 import demo.liufan.com.myapplication.activity.ADRollUDActivity;
 import demo.liufan.com.myapplication.activity.FlowLayoutActivity;
+import demo.liufan.com.myapplication.activity.HomeActivity;
 import demo.liufan.com.myapplication.activity.InquiryQuotationActivity;
 import demo.liufan.com.myapplication.activity.MyGridView;
 import demo.liufan.com.myapplication.activity.TabViewExcelActivity;
 import demo.liufan.com.myapplication.listener.DialogUIListener;
 import demo.liufan.com.myapplication.utils.SnackbarUtil;
+import demo.liufan.com.myapplication.wight.BorderImageView;
 import demo.liufan.com.myapplication.wight.BottomMenuDialog;
 import demo.liufan.com.myapplication.wight.DialogUIUtils;
 
 public class MainActivity extends Activity {
 
+    private static final String TAG = "MainActivity";
+
     private BottomMenuDialog d5;
+    private LinearLayout linear;
+    private BorderImageView iv_img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_main);
+
+        linear = (LinearLayout)findViewById(R.id.linear);
+        iv_img = (BorderImageView)findViewById(R.id.iv_img);
+
+        iv_img.setBackgroundResource(R.mipmap.shoes);
 
     }
 
@@ -33,7 +59,7 @@ public class MainActivity extends Activity {
     }
 
     public void onClick_Event_DiaLog(View view){
-        startActivity(new Intent(this, MyGridView.class));
+        startActivity(new Intent(this, HomeActivity.class));
     }
 
     public void onClick_Event_3(View view){
@@ -97,5 +123,58 @@ public class MainActivity extends Activity {
                 }).create();
 
         d5.show();
+
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.scale_anim);
+
+        animation.setFillAfter(true);
+        linear.startAnimation(animation);
+    }
+
+    public void onClick_Event_8(final View view){
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+        }
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, 2);
+            getReadContacts();
+        }
+        Intent intent = new Intent("demo.liufan.com.myapplication");
+        sendBroadcast(intent);
+    }
+
+    private void getReadContacts() {
+        Cursor cursor = null;
+        try{
+            cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
+            if (cursor != null){
+                while (cursor.moveToNext()){
+                    String displayName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+                    String number = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                    Log.i(TAG, "displayName: "+displayName+"............"+"number"+number);
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case 1:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+
+                }else{
+
+                }
+            case 2:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+
+                }else{
+
+                }
+        }
     }
 }

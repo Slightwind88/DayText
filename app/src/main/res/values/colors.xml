@@ -41,4 +41,5 @@
     <color name="app_style_blue">#0096FF</color>   <!-- 蓝色 -->
     <color name="default_line_color">#cccccc</color>
     <color name="default_gray">#e3e3e3</color>
+    <color name="img_e0e0e0">#e0e0e0</color>
 </resources>

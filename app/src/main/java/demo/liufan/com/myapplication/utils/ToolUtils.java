@@ -11,7 +11,11 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+
+import demo.liufan.com.myapplication.R;
 import demo.liufan.com.myapplication.bean.BuildBean;
 import demo.liufan.com.myapplication.config.DialogConfig;
 import demo.liufan.com.myapplication.wight.DialogUIUtils;
@@ -154,6 +158,11 @@ public class ToolUtils {
         }
         return context.getResources().getColor(colorRes);
 
+    }
+
+    public static void setImage(Context context, String imag, ImageView imageView){
+        Glide.with(context).load(imag).into(imageView);
+//        imageView.setBackgroundResource(R.color.app_style_blue);
     }
 
 }

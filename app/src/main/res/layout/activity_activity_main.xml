@@ -1,50 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:onClick="onClick_Event_listMenu"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="点击listview条目弹出隐藏的部分"/>
-        <Button
-            android:onClick="onClick_Event_DiaLog"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="网格布局"/>
-        <Button
-            android:onClick="onClick_Event_3"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="DialogList弹窗"/>
-        <Button
-            android:onClick="onClick_Event_4"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="execl表格"/>
-        <Button
-            android:onClick="onClick_Event_5"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="流式布局"/>
-        <Button
-            android:onClick="onClick_Event_6"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="淘宝广告消息滚动"/>
-        <Button
-            android:onClick="onClick_Event_7"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="ios底部弹窗"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:onClick="onClick_Event_listMenu"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="点击listview条目弹出隐藏的部分"/>
+            <Button
+                android:onClick="onClick_Event_DiaLog"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="网格布局"/>
+            <Button
+                android:onClick="onClick_Event_3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="DialogList弹窗"/>
+            <Button
+                android:onClick="onClick_Event_4"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="execl表格"/>
+            <Button
+                android:onClick="onClick_Event_5"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="流式布局"/>
+            <Button
+                android:onClick="onClick_Event_6"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="淘宝广告消息滚动"/>
+            <Button
+                android:onClick="onClick_Event_7"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="ios底部弹窗"/>
+
+            <Button
+                android:onClick="onClick_Event_8"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="发送广播"/>
+
+        </LinearLayout>
+
+        <demo.liufan.com.myapplication.wight.BorderImageView
+            android:id="@+id/iv_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>
+
 
 
 

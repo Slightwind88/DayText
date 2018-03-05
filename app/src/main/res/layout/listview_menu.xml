@@ -4,9 +4,22 @@
     android:layout_height="match_parent"
     android:background="#EEEEEE"
     android:orientation="vertical">
-    <ListView
-        android:id="@+id/listview_menu_list"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="@null" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <demo.liufan.com.myapplication.wight.NewMyListView
+                android:id="@+id/listview_menu_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

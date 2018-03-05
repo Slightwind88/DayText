@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dayText.iml" filepath="$PROJECT_DIR$/dayText.iml" />
       <module fileurl="file://F:\project\nowproject\dayText\demo.iml" filepath="F:\project\nowproject\dayText\demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
     </modules>
   </component>
 </project>

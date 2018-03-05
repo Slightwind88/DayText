@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:drawablePadding="@dimen/dimen_12"
-    android:gravity="center_vertical"
-    android:padding="@dimen/dimen_12"
-    android:textSize="@dimen/dimen_16" />
+    android:gravity="center"
+    android:text="@string/app_name"
+    android:paddingTop="14dp"
+    android:textSize="14sp" />
