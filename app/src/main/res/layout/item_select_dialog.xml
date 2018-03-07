@@ -5,6 +5,7 @@
     android:layout_height="fill_parent"
     android:drawablePadding="@dimen/dimen_12"
     android:gravity="center"
+    android:background="#dd1"
     android:text="@string/app_name"
     android:paddingTop="14dp"
     android:textSize="14sp" />

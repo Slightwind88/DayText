@@ -57,6 +57,12 @@
                 android:layout_height="48dp"
                 android:text="发送广播"/>
 
+            <Button
+                android:onClick="onClick_Event_9"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="indicator"/>
+
         </LinearLayout>
 
         <demo.liufan.com.myapplication.wight.BorderImageView

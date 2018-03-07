@@ -27,6 +27,7 @@
         <activity android:name=".activity.FlowLayoutActivity"/>
         <activity android:name=".activity.ADRollUDActivity"/>
         <activity android:name=".activity.InquiryQuotationActivity"/>
+        <activity android:name=".activity.IndicatorActivity"/>
     </application>
 
 </manifest>

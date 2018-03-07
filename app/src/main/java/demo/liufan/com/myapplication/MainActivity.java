@@ -25,6 +25,7 @@ import java.util.logging.Logger;
 import demo.liufan.com.myapplication.activity.ADRollUDActivity;
 import demo.liufan.com.myapplication.activity.FlowLayoutActivity;
 import demo.liufan.com.myapplication.activity.HomeActivity;
+import demo.liufan.com.myapplication.activity.IndicatorActivity;
 import demo.liufan.com.myapplication.activity.InquiryQuotationActivity;
 import demo.liufan.com.myapplication.activity.MyGridView;
 import demo.liufan.com.myapplication.activity.TabViewExcelActivity;
@@ -141,6 +142,10 @@ public class MainActivity extends Activity {
         }
         Intent intent = new Intent("demo.liufan.com.myapplication");
         sendBroadcast(intent);
+    }
+
+    public void onClick_Event_9(View view){
+        startActivity(new Intent(this, IndicatorActivity.class));
     }
 
     private void getReadContacts() {
