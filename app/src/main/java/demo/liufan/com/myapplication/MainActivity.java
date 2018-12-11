@@ -2,6 +2,8 @@ package demo.liufan.com.myapplication;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -30,12 +32,13 @@ import demo.liufan.com.myapplication.activity.InquiryQuotationActivity;
 import demo.liufan.com.myapplication.activity.MyGridView;
 import demo.liufan.com.myapplication.activity.TabViewExcelActivity;
 import demo.liufan.com.myapplication.listener.DialogUIListener;
+import demo.liufan.com.myapplication.service.TextService;
 import demo.liufan.com.myapplication.utils.SnackbarUtil;
 import demo.liufan.com.myapplication.wight.BorderImageView;
 import demo.liufan.com.myapplication.wight.BottomMenuDialog;
 import demo.liufan.com.myapplication.wight.DialogUIUtils;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity{
 
     private static final String TAG = "MainActivity";
 
@@ -52,6 +55,9 @@ public class MainActivity extends Activity {
         iv_img = (BorderImageView)findViewById(R.id.iv_img);
 
         iv_img.setBackgroundResource(R.mipmap.shoes);
+
+
+        startService(new Intent(this, TextService.class));
 
     }
 
