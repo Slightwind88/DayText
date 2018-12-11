@@ -63,6 +63,12 @@
                 android:layout_height="48dp"
                 android:text="indicator"/>
 
+            <Button
+                android:onClick="sensorWave"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="SensorWave"/>
+
         </LinearLayout>
 
         <demo.liufan.com.myapplication.wight.BorderImageView

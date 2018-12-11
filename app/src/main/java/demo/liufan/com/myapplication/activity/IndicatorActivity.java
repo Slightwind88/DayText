@@ -12,7 +12,6 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TableLayout;
 
 import com.flyco.tablayout.SlidingTabLayout;
 
@@ -50,6 +49,7 @@ public class IndicatorActivity extends FragmentActivity{
 
     }
 
+
     private void initView(){
         list_title = new ArrayList<>();
         list_title.add("All");
@@ -69,7 +69,7 @@ public class IndicatorActivity extends FragmentActivity{
 
         tab_tablayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tab_tablayout.setupWithViewPager(viewPager);
-                setIndicator(this, tab_tablayout, 10, 10);
+        setIndicator(this, tab_tablayout, 10, 10);
 
     }
 

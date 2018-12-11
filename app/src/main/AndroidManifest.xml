@@ -28,6 +28,9 @@
         <activity android:name=".activity.ADRollUDActivity"/>
         <activity android:name=".activity.InquiryQuotationActivity"/>
         <activity android:name=".activity.IndicatorActivity"/>
+        <activity android:name=".activity.SurfaceViewWaveActivity"
+                    android:screenOrientation="portrait">
+        </activity>
         <receiver android:name=".receiver.UserScreenReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT"/>

@@ -2,6 +2,7 @@ package demo.liufan.com.myapplication;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -33,7 +33,6 @@ public class ListViewMenuActivity extends Activity {
         final NewMyListView list = (NewMyListView)findViewById(R.id.listview_menu_list);
         mAdapter = new ListViewAdapter(this, data);
         list.setAdapter(mAdapter);
-//        list.setOnItemClickListener(new OnListItemClickListenser());
         list.setOnItemClickListener(new NewMyListView.MyOnItemClickListener() {
             @Override
             public void onItemClick(ViewGroup parent, View view, int position, Object o) {
@@ -46,6 +45,8 @@ public class ListViewMenuActivity extends Activity {
                 mAdapter.notifyDataSetChanged();
             }
         });
+
+
     }
     private class ListViewAdapter extends BaseAdapter {
         private LayoutInflater mLayoutInflater;

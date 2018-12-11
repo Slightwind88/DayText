@@ -30,6 +30,7 @@ import demo.liufan.com.myapplication.activity.HomeActivity;
 import demo.liufan.com.myapplication.activity.IndicatorActivity;
 import demo.liufan.com.myapplication.activity.InquiryQuotationActivity;
 import demo.liufan.com.myapplication.activity.MyGridView;
+import demo.liufan.com.myapplication.activity.SurfaceViewWaveActivity;
 import demo.liufan.com.myapplication.activity.TabViewExcelActivity;
 import demo.liufan.com.myapplication.listener.DialogUIListener;
 import demo.liufan.com.myapplication.service.TextService;
@@ -152,6 +153,10 @@ public class MainActivity extends Activity{
 
     public void onClick_Event_9(View view){
         startActivity(new Intent(this, IndicatorActivity.class));
+    }
+
+    public void sensorWave(View view){
+        startActivity(new Intent(this, SurfaceViewWaveActivity.class));
     }
 
     private void getReadContacts() {
